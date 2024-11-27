@@ -99,7 +99,6 @@ body{
 }
 
 .card-container{
-    background-color: var(--lightOrange);
     border-radius: 20px;
     margin-top: 20px;
 }
@@ -162,6 +161,20 @@ body{
     font-style: normal;
     font-size: 16px;
     color: var(--offWhite);
+}
+
+.work{
+    background-color: var(--lightOrange);
+}
+
+.play{
+    border-radius: 20px;
+    background-color: var(--lightTile);
+}
+
+.study{
+    border-radius: 20px;
+    background-color: var(--lightRed);
 }
 
 @media screen and (min-width: 900px) {
