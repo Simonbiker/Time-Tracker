@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+p{
+  margin: 0;
+}
+
+:root {
+    --white: #FFFFFF;
+    --lighterPurple: #BBC0FF;
+    --darkBlue: #1C204B;
+    --purple: #5A1CBB;
+    --slightlyLightPurple: #7335D2;
+    --lightPurple: #7078C9;
+    --veryDarkBlue: #0E1323;
+    --green: #29BA66;
+    --lightGreen: #4BCF82;
+    --tile:#3F9CBB;
+    --lightTile:#55C2E6;
+    --offWhite: #D8D8D8;
+    --orange: #D96C47;
+    --lightOrange: #FF8B64;
+    --musturd: #E6A532;
+    --red: #F04667;
+    --lightRed: #FF5E7D;
+    --yellow:#F1C75B;
+
+
+    --rubik: "Rubik", sans-serif;
+}
+
+
+body{ 
+    background-color: var(--veryDarkBlue);
+    margin: 60px 35px 20px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.large-col{
+    width: 327px;
+    height: 203px;
+    border-radius: 20px;
+    background-color: var(--darkBlue);
+}
+
+.profile-col{
+    background-color: var(--slightlyLightPurple);
+    min-width: 256px;
+    height: 133px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.profile-img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 3px solid var(--white);
+}
+
+.report {
+    width: 172px;
+    padding-left: 20px;
+    color: var(--offWhite);
+    font-family: var(--rubik);
+}
+.name {
+    color: var(--white);
+    font-family: var(--rubik);
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 23px;
+}
+
+.nav-buttons {
+    background-color: var(--darkBlue);
+    border: none;
+    color: var(--white);
+}
+
+
+@media screen and (min-width: 900px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+        background-color: var(--green);
+    }
+    
+    .large-col{
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        background-color: var(--lightOrange);
+    }
+    
+    .top-row{
+        grid-column: 2;
+        grid-row: 1;
+        background-color: var(--lightTile);
+    }
+    
+    .second-row{
+        grid-column: 2;
+        grid-row: 2;
+        background-color: var(--lighterPurple);
+    }
+}
