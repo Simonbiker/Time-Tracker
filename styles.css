@@ -124,7 +124,8 @@ body{
 
 .card{
     min-width: 327px;
-    min-height: 122px;
+    /* min-height: 122px; */
+    max-width: 122px;
     background-color: var(--darkBlue);
     background-size: cover;
     border-radius: 20px;
@@ -141,11 +142,13 @@ body{
 }
 
 .type {
-    width: 43px;
+    width: 76px;
+    max-height: 21px;
     font-family: var(--rubik);
     color: var(--white);
     font-size: 18px;
     font-weight: 400;
+    letter-spacing: 0;
 }
 
 .ellipsis {
@@ -186,6 +189,18 @@ body{
 .study{
     border-radius: 20px;
     background-color: var(--lightRed);
+}
+
+.exercise{
+    background-color: var(--lightGreen);
+}
+
+.social {
+    background-color: var(--slightlyLightPurple);
+}
+
+.self-care{
+    background-color: var(--yellow);
 }
 
 @media screen and (min-width: 900px) {

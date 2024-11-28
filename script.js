@@ -23,9 +23,11 @@ function displayData(timeframe) {
 
 function updateUI(title, current, previous, timeframe) {
 
-  let titleElement = document.getElementById(`${title}`);
-  let currentElement = document.getElementById(`${title}Time`);
-  let previousElement = document.getElementById(`previous${title}Time`);
+  let amendedTitle = title.toLowerCase().replace(" ", "-");
+
+  let titleElement = document.getElementById(`${amendedTitle}`);
+  let currentElement = document.getElementById(`${amendedTitle}Time`);
+  let previousElement = document.getElementById(`previous${amendedTitle}Time`);
 
   if (titleElement && currentElement && previousElement) {
     titleElement.textContent = title;
