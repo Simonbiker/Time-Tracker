@@ -55,6 +55,22 @@ document.querySelectorAll(".nav-buttons").forEach(button => {
   });
 });
 
+document.querySelectorAll(".nav-buttons").forEach((button) => {
+  button.addEventListener("click", (e) => {
+    // Remove "active" class from all buttons
+    document.querySelectorAll(".nav-buttons").forEach((btn) => btn.classList.remove("active"));
+
+    // Add "active" class to the clicked button
+    e.target.classList.add("active");
+
+    // Get selected timeframe from button text and display corresponding data
+    const selectedTimeframe = e.target.textContent.toLowerCase();
+    currentTimeframe = selectedTimeframe;
+    displayData(selectedTimeframe);
+  });
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   getData();
+  document.querySelector(".nav-buttons:nth-child(2)").classList.add("active");
 });

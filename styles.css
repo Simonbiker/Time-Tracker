@@ -96,7 +96,18 @@ body{
     background-color: var(--darkBlue);
     border: none;
     color: var(--white);
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
+
+.nav-buttons:hover {
+    color: var(--lightTile);
+  }
+  
+  .nav-buttons.active {
+    color: var(--white);
+    font-weight: bold;
+  }
 
 .card-container{
     border-radius: 20px;
