@@ -34,8 +34,8 @@ Your users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/Simonbiker/Time-Tracker](https://github.com/Simonbiker/Time-Tracker)
+- Live Site URL: [https://time-tracker-isjf9qcgv-simonbikers-projects.vercel.app/](https://time-tracker-isjf9qcgv-simonbikers-projects.vercel.app/)
 
 ## My process
 
