@@ -35,7 +35,7 @@ Your users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/Simonbiker/Time-Tracker](https://github.com/Simonbiker/Time-Tracker)
-- Live Site URL: [https://time-tracker-isjf9qcgv-simonbikers-projects.vercel.app/](https://time-tracker-isjf9qcgv-simonbikers-projects.vercel.app/)
+- Live Site URL: [https://time-tracker-git-main-simonbikers-projects.vercel.app/](https://time-tracker-git-main-simonbikers-projects.vercel.app/)
 
 ## My process
 
