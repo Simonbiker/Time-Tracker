@@ -121,11 +121,13 @@ body, html {
     width: 175px;
     color: var(--lighterPurple);
     font-family: var(--rubik);
+    font-weight: 300;
 }
 
 .name {
     color: var(--white);
     font-family: var(--rubik);
+    font-weight: 300;
 }
 
 .top-row {
@@ -262,7 +264,8 @@ body, html {
     .grid-container {
         grid-template-columns: 255px repeat(3, 255px); /* First column + 3 equal columns */
         grid-template-rows: repeat(2, 253px); /* Two equal rows */
-        gap: 12px; /* Space between grid items */
+        row-gap: 12px;
+        column-gap: 20px;
         width: auto; /* Adjusts width dynamically for larger screens */
     }
 
@@ -280,6 +283,23 @@ body, html {
     .profile-col {
         height: 354px;
         max-height: 354px;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        padding: 0 0 0 35px;
+    }
+
+    .profile-img {
+        width: 78px;
+        height: 78px;
+    }
+
+    .report{
+        font-size: 15px;
+    }
+
+    .name {
+        font-size: 40px;
     }
 
     .nav {
