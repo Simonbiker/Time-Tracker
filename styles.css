@@ -106,6 +106,7 @@ body, html {
     cursor: pointer;
     transition: color 0.3s ease;
     font-size: 18px;
+    font-weight: 300;
 }
 
 .nav-buttons:hover {
@@ -254,7 +255,6 @@ body, html {
     width: 100%;             
 }
 
-/* Ensure grid layout only applies on larger screens */
 @media screen and (min-width: 900px) {
     body {
         height: 100vh;
@@ -262,21 +262,19 @@ body, html {
     }
 
     .grid-container {
-        grid-template-columns: 255px repeat(3, 255px); /* First column + 3 equal columns */
-        grid-template-rows: repeat(2, 253px); /* Two equal rows */
+        grid-template-columns: 255px repeat(3, 255px); 
+        grid-template-rows: repeat(2, 253px); 
         row-gap: 12px;
         column-gap: 20px;
-        width: auto; /* Adjusts width dynamically for larger screens */
+        width: auto;
     }
 
     .symbol-img{
         width: 72px;
-        height: 66px;
     }
 
-    /* Adjust large column height for larger screens */
     .large-col {
-        height: 518px; /* Height of large column on larger screens */
+        height: 518px; 
         max-height: 518px;
     }
 
@@ -337,9 +335,8 @@ body, html {
         padding: 0 0 10px 0;
     }
 
-    /* Adjust height for grid items in top and second rows */
     .top-row, .second-row {
-        height: 255px; /* Adjust height for each item */
-        width: 255px; /* Set width for each item */
+        height: 255px;
+        width: 255px;
     }
 }

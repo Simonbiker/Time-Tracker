@@ -62,10 +62,8 @@ document.querySelectorAll(".nav-buttons").forEach((button) => {
     // Remove "active" class from all buttons
     document.querySelectorAll(".nav-buttons").forEach((btn) => btn.classList.remove("active"));
 
-    // Add "active" class to the clicked button
     e.target.classList.add("active");
 
-    // Get selected timeframe from button text and display corresponding data
     const selectedTimeframe = e.target.textContent.toLowerCase();
     currentTimeframe = selectedTimeframe;
     displayData(selectedTimeframe);
