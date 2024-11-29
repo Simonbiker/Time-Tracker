@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 
-/* *,
+*,
 *::before,
 *::after {
   box-sizing: border-box;
-} */
+}
 
 
 p{
@@ -78,7 +78,7 @@ body, html {
 .profile-col {
     background-color: var(--slightlyLightPurple);
     top: 0;                     
-    height: 70%;               
+    height: 65%;               
     border-radius: 20px;
     z-index: 1;
 }
@@ -95,18 +95,21 @@ body, html {
     top: 60%;                  
     height: 40%;               
     border-radius: 0 0 20px 20px;
+    align-items: self-end;
+    padding-bottom: 22px;
 }
 
 .nav-buttons {
     background-color: var(--darkBlue);
     border: none;
-    color: var(--white);
+    color: var(--lighterPurple);
     cursor: pointer;
     transition: color 0.3s ease;
+    font-size: 18px;
 }
 
 .nav-buttons:hover {
-    color: var(--lightTile);
+    color: var(--lighterPurple);
 }
   
 .nav-buttons.active {
@@ -116,7 +119,7 @@ body, html {
 
 .report {
     width: 175px;
-    color: var(--offWhite);
+    color: var(--lighterPurple);
     font-family: var(--rubik);
 }
 
@@ -127,19 +130,12 @@ body, html {
 
 .top-row {
     display: flex;
-    position: relative;         /* Enables relative positioning for children */
-    border-radius: 20px;        /* Rounded corners */
-    overflow: hidden;           /* Ensure overflow is hidden */
-    height: 160px;              /* Adjusted height for mobile */
+    position: relative;         
+    border-radius: 20px;        
+    overflow: hidden;           
+    height: 160px;              
 }
 
-/* Styling for item1, item2, item3, item4, item5, item6 (All have overlapping children) */
-/* .top-row.work, .top-row.play, .top-row.study,
-.second-row.exercise, .second-row.social, .second-row.self-care {
-    background-color: var(--green);  
-} */
-
-/* First child - covering top portion */
 .child-div1 {
     background-color: var(--lightOrange);
     position: absolute;         
@@ -148,7 +144,6 @@ body, html {
     width: 100%;              
 }
 
-/* Second child - overlapping bottom portion */
 .child-div2 {
     background-color: var(--darkBlue);
     position: absolute;         
@@ -159,8 +154,6 @@ body, html {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    color: white;
-    font-weight: bold;
     z-index: 2;
     border-radius: 20px;
 }
@@ -194,7 +187,8 @@ body, html {
     top: -14px;                
     right: 10px;              
     z-index: 1;               
-    width: 80px;
+    width: 78px;
+    height: 78px;
 }
 
 .card-type{ 
@@ -203,7 +197,7 @@ body, html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 25px 0 25px;
+    /* padding: 0 25px 0 25px; */
 }
 
 .card-time {
@@ -234,7 +228,7 @@ body, html {
     font-family: var(--rubik);
     font-style: normal;
     font-size: 16px;
-    color: var(--offWhite);
+    color: var(--lighterPurple);
 }
 
 .ellipsis {
@@ -262,16 +256,19 @@ body, html {
 @media screen and (min-width: 900px) {
     body {
         height: 100vh;
+        margin: 0;
     }
 
-    .nav {
-        
-    }
     .grid-container {
         grid-template-columns: 255px repeat(3, 255px); /* First column + 3 equal columns */
         grid-template-rows: repeat(2, 253px); /* Two equal rows */
         gap: 12px; /* Space between grid items */
         width: auto; /* Adjusts width dynamically for larger screens */
+    }
+
+    .symbol-img{
+        width: 72px;
+        height: 66px;
     }
 
     /* Adjust large column height for larger screens */
@@ -280,233 +277,49 @@ body, html {
         max-height: 518px;
     }
 
+    .profile-col {
+        height: 354px;
+        max-height: 354px;
+    }
+
+    .nav {
+        height: 36%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    .top-nav-btn {
+        margin: 25px 0 0 20px;
+    }
+
+    .nav-buttons {
+        margin: 10px 0 5px 30px;
+    }
+
+    .child-div2 {
+        padding: 20px;
+    }
+
+    .card-type {
+        padding: 0 35px 0 35px;
+    }
+
+    .card-time {
+        flex-direction: column;
+        align-items: flex-start;
+        width: -webkit-fill-available; 
+    }
+
+    .time {
+        font-size: 56px;
+        padding: 0 0 10px 0;
+    }
+
     /* Adjust height for grid items in top and second rows */
     .top-row, .second-row {
         height: 255px; /* Adjust height for each item */
         width: 255px; /* Set width for each item */
     }
 }
-
-
-/* 
-body{ 
-    background-color: var(--veryDarkBlue);
-    margin: 60px 35px 20px 35px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.large-col{
-    min-width: 327px;
-    height: 203px;
-    border-radius: 20px;
-    background-color: var(--darkBlue);
-}
-
-.profile-col{
-    background-color: var(--slightlyLightPurple);
-    min-width: 256px;
-    height: 133px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 30px;
-    border-radius: 10px;
-}
-
-.profile-img {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    border: 3px solid var(--white);
-}
-
-.report {
-    width: 172px;
-    padding-left: 20px;
-    color: var(--offWhite);
-    font-family: var(--rubik);
-}
-.name {
-    color: var(--white);
-    font-family: var(--rubik);
-}
-
-.nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    padding-top: 23px;
-}
-
-.nav-buttons {
-    background-color: var(--darkBlue);
-    border: none;
-    color: var(--white);
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.nav-buttons:hover {
-    color: var(--lightTile);
-  }
-  
-  .nav-buttons.active {
-    color: var(--white);
-    font-weight: bold;
-  }
-
-.card-container{
-    border-radius: 20px;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.card-background{
-    min-height: 38px;
-}
-
-.symbol-img{
-    float: right;
-}
-
-.card{
-    min-width: 327px;
-    min-height: 122px;
-    max-width: 122px;
-    background-color: var(--darkBlue);
-    background-size: cover;
-    border-radius: 20px;
-    position: relative;
-}
-
-.card-type{ 
-    position: relative;
-    min-width: 279px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 25px 0 25px;
-}
-
-.type {
-    width: 76px;
-    max-height: 21px;
-    font-family: var(--rubik);
-    color: var(--white);
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: 0;
-}
-
-.ellipsis {
-    min-width: 21px;
-    height: 5px;
-}
-
-.card-time {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 25px;
-}
-
-.time {
-    font-family: var(--rubik);
-    font-weight: 300;
-    font-size: 32px;
-    color: var(--white);
-}
-
-.last-time {
-    font-family: var(--rubik);
-    font-style: normal;
-    font-size: 16px;
-    color: var(--offWhite);
-}
-
-.work{
-    background-color: var(--lightOrange);
-}
-
-.play{
-    border-radius: 20px;
-    background-color: var(--lightTile);
-}
-
-.study{
-    border-radius: 20px;
-    background-color: var(--lightRed);
-}
-
-.exercise{
-    background-color: var(--lightGreen);
-}
-
-.social {
-    background-color: var(--slightlyLightPurple);
-}
-
-.self-care{
-    background-color: var(--yellow);
-}
-
-@media screen and (min-width: 900px) {
-
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr); 
-      grid-template-rows: 253px 253px; 
-      gap: 12px; 
-      max-height: 518px;
-      height: 518px;
-      max-width: 255px;
-      width: 255px;
-    }
-  
-
-    .large-col {
-      grid-column: 1; 
-      grid-row: 1 / span 2; 
-      background-color: var(--lightOrange);
-    }
-  
-    
-    .top-row .card-container:nth-child(1) {
-      grid-column: 2; 
-      grid-row: 1;
-    }
-  
-    .top-row .card-container:nth-child(2) {
-      grid-column: 3; 
-      grid-row: 1;
-    }
-  
-    .top-row .card-container:nth-child(3) {
-      grid-column: 4; 
-      grid-row: 1;
-    }
-  
-    .second-row .card-container:nth-child(1) {
-      grid-column: 2; 
-      grid-row: 2;
-    }
-  
-    .second-row .card-container:nth-child(2) {
-      grid-column: 3; 
-      grid-row: 2;
-    }
-  
-    .second-row .card-container:nth-child(3) {
-      grid-column: 4;
-      grid-row: 2;
-    }
-  }
-   */
